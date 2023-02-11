@@ -11,6 +11,7 @@ import {
 import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 import Services from './Services'
 import PromoCard from './PromoCard'
+import Upcoming from './Upcoming'
 
 const HomeScreen = () => {
   const navigation = useNavigation()
@@ -59,6 +60,12 @@ const HomeScreen = () => {
         <Text className="mx-7 pt-5 text-lg font-bold">Service</Text>
         <Services />
         <PromoCard />
+      </View>
+
+      {/* UpcomingCard */}
+      <View className="pb-20">
+        <Text className="mx-7 pt-5 text-lg font-bold">Upcoming Appointments</Text>
+        <Upcoming />
       </View>
     </SafeAreaView>
   )
