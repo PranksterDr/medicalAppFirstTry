@@ -3,12 +3,9 @@ import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import {
-  UserIcon,
-  ChevronDownIcon,
   MagnifyingGlassIcon,
   AdjustmentsHorizontalIcon,
 } from 'react-native-heroicons/outline'
-import MaterialCommunityIcons from '@expo/vector-icons/MaterialCommunityIcons'
 import Services from './Services'
 import PromoCard from './PromoCard'
 import Upcoming from './Upcoming'
@@ -23,7 +20,7 @@ const HomeScreen = () => {
   return (
     <SafeAreaView className="bg-white">
       {/* Header */}
-      <View className="mx-7 flex-row">
+      <View className="mx-7 flex-row mt-5">
         <View className="flex-1">
           <Text className="mb-2 text-lg text-[#253141]">Hello!</Text>
           <Text className="text-3xl font-bold text-[#253141]">Shanin Alam</Text>

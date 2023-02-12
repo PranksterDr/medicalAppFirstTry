@@ -16,10 +16,10 @@ const ServiceCards = (props: colorCard) => {
   }
 
   const iconVariants = {
-    dr: require('../images/icons/DoctorIcon.png'),
-    pill: require('../images/icons/PillowIcon.png'),
-    medCard: require('../images/icons/MedicalCardIcon.png'),
-    covid: require('../images/icons/CovidIcon.png'),
+    dr: require('../../images/icons/DoctorIcon.png'),
+    pill: require('../../images/icons/PillowIcon.png'),
+    medCard: require('../../images/icons/MedicalCardIcon.png'),
+    covid: require('../../images/icons/CovidIcon.png'),
   }
 
   return (
