@@ -1,6 +1,7 @@
 import { View, Text, ScrollView } from 'react-native'
 import React from 'react'
 const ScheduleDateCard = ({ bgColor, textColorLg, textColorSm, dayOfWeek }) => {
+  
   const colorOfDate = {
     firstBg: 'h-[84] w-[70] items-center justify-center rounded-3xl bg-[#1C6BA4]',
     secondBg: 'h-[84] w-[70] items-center justify-center rounded-3xl bg-[#DCEDF9]',

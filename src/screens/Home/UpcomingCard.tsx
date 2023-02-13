@@ -3,7 +3,7 @@ import React from 'react'
 import { EllipsisHorizontalIcon } from 'react-native-heroicons/outline'
 
 interface dtArr {
-  id: number
+  key: number
   date: number
   dayOfWeek: string
   time: string
@@ -14,7 +14,7 @@ interface dtArr {
 }
 
 const UpcomingCard = (data: dtArr) => {
-  const { id, date, dayOfWeek, time, doctor, profile, color, bgColor } = data
+  const { date, dayOfWeek, time, doctor, profile, color, bgColor } = data
   return (
     <View
       className="mx-4 h-28 w-72 flex-row items-center justify-center rounded-3xl"

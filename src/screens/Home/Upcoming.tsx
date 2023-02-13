@@ -49,7 +49,7 @@ const Upcoming = () => {
       {dataArr.map((data) => {
         return (
           <UpcomingCard
-            id={data.id}
+            key={data.id}
             date={data.date}
             dayOfWeek={data.dayOfWeek}
             time={data.time}

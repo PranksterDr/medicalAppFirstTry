@@ -8,22 +8,27 @@ import ScheduleDayCard from './ScheduleDayCard'
 const Shchedule = () => {
   const fakeDataArr = [
     {
+      id: 1,
       dayOfWeek: faker.date.weekday({ abbr: true }),
       fullName: `Dr.${faker.name.fullName()}`,
     },
     {
+      id: 2,
       dayOfWeek: faker.date.weekday({ abbr: true }),
       fullName: `Dr.${faker.name.fullName()}`,
     },
     {
+      id: 3,
       dayOfWeek: faker.date.weekday({ abbr: true }),
       fullName: `Dr.${faker.name.fullName()}`,
     },
     {
+      id: 4,
       dayOfWeek: faker.date.weekday({ abbr: true }),
       fullName: `Dr.${faker.name.fullName()}`,
     },
     {
+      id: 5,
       dayOfWeek: faker.date.weekday({ abbr: true }),
       fullName: `Dr.${faker.name.fullName()}`,
     },
@@ -52,6 +57,7 @@ const Shchedule = () => {
               textColorLg={index == 0 ? 'firstTextLg' : 'secondTextLg'}
               textColorSm={index == 0 ? 'firstTextSm' : 'secondTextSm'}
               dayOfWeek={data.dayOfWeek}
+              key={data.id}
             />
           )
         })}
