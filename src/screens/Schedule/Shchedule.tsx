@@ -1,11 +1,22 @@
-import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
-import ScheduleDateCard from './ScheduleDateCard'
-import { faker } from '@faker-js/faker'
 import Icon, { Icons } from '../Icons'
+import { faker } from '@faker-js/faker'
+import React, { useState } from 'react'
+import GetDataFromAPI from './getDataFromAPI'
 import ScheduleDayCard from './ScheduleDayCard'
+import ScheduleDateCard from './ScheduleDateCard'
+import { SafeAreaView } from 'react-native-safe-area-context'
+import { View, Text, ScrollView, TextInput } from 'react-native'
+
 const Shchedule = () => {
+  const [text, setText] = useState('')
+
+  const handleKeyPress = ({ nativeEvent: { key: keyValue } }) => {
+    console.log(keyValue)
+    if (keyValue === undefined) {
+      console.log('Done!')
+    }
+  }
+
   const fakeDataArr = [
     {
       id: 1,
@@ -63,6 +74,7 @@ const Shchedule = () => {
         })}
       </ScrollView>
       <ScheduleDayCard />
+      <GetDataFromAPI/>
     </SafeAreaView>
   )
 }

@@ -9,6 +9,7 @@ const Tab = createMaterialBottomTabNavigator()
 
 const bottomTabDataArr = [
   {
+    id: 1,
     name: 'Home',
     component: HomeScreen,
     activeColor: '#1C6BA4',
@@ -19,6 +20,7 @@ const bottomTabDataArr = [
     inActiveIcon: 'home-outline',
   },
   {
+    id: 2,
     name: 'Schedule',
     component: Shchedule,
     activeColor: '#1C6BA4',
@@ -29,6 +31,7 @@ const bottomTabDataArr = [
     inActiveIcon: 'calendar-outline',
   },
   {
+    id: 3,
     name: 'Report',
     component: HomeScreen,
     activeColor: '#1C6BA4',
@@ -39,6 +42,7 @@ const bottomTabDataArr = [
     inActiveIcon: 'file-text-o',
   },
   {
+    id: 4,
     name: 'Notification',
     component: HomeScreen,
     activeColor: '#1C6BA4',
@@ -61,6 +65,7 @@ const BottomTab = () => {
         {bottomTabDataArr.map((item) => {
           return (
             <Tab.Screen
+              key={item.id}
               name={item.name}
               component={item.component}
               options={{
