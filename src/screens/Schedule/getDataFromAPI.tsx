@@ -1,24 +1,14 @@
 import React, { Component, useEffect, useState } from 'react'
 import { Button, Text, View } from 'react-native'
+import ExData from './ExData'
+import { TouchableOpacity } from 'react-native'
 
-const GetDataFromAPI = () => {
-  let dt
-  function clickMe() {
-    const [data, setData] = useState([])
-    console.log(data)
-    useEffect(() => {
-      fetch('https://135c-93-170-124-107.eu.ngrok.io/calcproperties/?metan=98.9')
-        .then((response) => response.json())
-        .then((json) => setData(json))
-        .catch((error) => console.error(error))
-    }, [])
-    return data
-  }
- const data = clickMe()
+const GetDataFromAPI = (props) => {
+  const [prompt, setPrompt] = useState(false)
   return (
     <View>
-      <Text>{data}</Text>
-      <Button title="Click Me" onPress={clickMe} />
+      <Button title="Click Me" onPress={() => setPrompt(!prompt)} />
+      {prompt ? <ExData /> : null}
     </View>
   )
 }
